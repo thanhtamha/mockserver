@@ -8,6 +8,7 @@ const app = express();
 app.set('json spaces', 2);
 app.use(express.json());
 app.use(express.static('src/apidoc'));
+const mockFolder = './mockdata';
 
 // 2. Middleware
 const cors = require('cors');
@@ -32,14 +33,14 @@ app.all('*', function (req, res) {
 		if (path.startsWith('/ApiDoc') && path.includes('/ApiDoc')) {
 			// Request from API Doc - Web
 			if (path === '/ApiDoc/api') {
-				const mock = require('./mockdata/api.json');
+				const mock = require(mockFolder + '/api.json');
 				res.json({
 					detail: mock,
 				});
 			} else {
 				path = path.replace('/ApiDoc', '');
-				const mockReq = require('./mockdata' + path + '/request.json');
-				const mockRes = require('./mockdata' + path + '/response.json');
+				const mockReq = require(mockFolder + path + '/request.json');
+				const mockRes = require(mockFolder + path + '/response.json');
 
 				const Res = {
 					detail: {
@@ -51,7 +52,7 @@ app.all('*', function (req, res) {
 			}
 		} else {
 			// Others Request
-			const mock = require('./mockdata' + path + '/response.json');
+			const mock = require(mockFolder + path + '/response.json');
 			res.json(mock);
 		}
 	} catch (error) {
