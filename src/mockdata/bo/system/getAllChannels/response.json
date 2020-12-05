@@ -1,0 +1,14 @@
+{
+	"success": "",
+	"errorCode": "",
+	"detail": [
+		{
+			"code": "FO",
+			"dscp": "Front Office"
+		},
+		{
+			"code": "BO",
+			"dscp": "Back Office"
+		}
+	]
+}

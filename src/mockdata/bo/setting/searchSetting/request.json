@@ -1,0 +1,14 @@
+{
+	"langCd": "en",
+	"userId": "d0f792f5",
+	"detail": {
+		"pagination": {
+			"pageNo": 1,
+			"totalPage": 0,
+			"pageSize": 10
+		},
+		"search": {
+			"channel": "FO"
+		}
+	}
+}

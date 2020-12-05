@@ -1,0 +1,45 @@
+{
+	"appName": "API Document",
+	"apiGroup": [
+		{
+			"groupName": "System",
+			"apiList": [
+				{
+					"apiName": "/bo/system/getUserStatus",
+					"url": "/bo/system/getUserStatus",
+					"type": "POST"
+				},
+				{
+					"apiName": "/bo/system/getAllChannels",
+					"url": "/bo/system/getAllChannels",
+					"type": "POST"
+				}
+			]
+		},
+		{
+			"groupName": "Settings",
+			"apiList": [
+				{
+					"apiName": "/bo/setting/addSetting",
+					"url": "/bo/setting/addSetting",
+					"type": "POST"
+				},
+				{
+					"apiName": "/bo/setting/deleteSetting",
+					"url": "/bo/setting/deleteSetting",
+					"type": "POST"
+				},
+				{
+					"apiName": "/bo/setting/searchSetting",
+					"url": "/bo/setting/searchSetting",
+					"type": "POST"
+				},
+				{
+					"apiName": "/bo/setting/updateSetting",
+					"url": "/bo/setting/updateSetting",
+					"type": "POST"
+				}
+			]
+		}
+	]
+}

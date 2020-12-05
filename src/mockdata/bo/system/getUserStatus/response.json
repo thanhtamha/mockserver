@@ -1,0 +1,14 @@
+{
+	"success": "",
+	"errorCode": "",
+	"detail": [
+		{
+			"code": "ACTIVE",
+			"dscp": "Active"
+		},
+		{
+			"code": "INACTIVE",
+			"dscp": "Inactive"
+		}
+	]
+}
