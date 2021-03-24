@@ -17,3 +17,5 @@ You may change the folder structure and path accordingly.
 
 1. Create api url in api.json
 2. Create folder structure accordingly with api url
+3. View on API Document Interface or access from browser/postman
+(example: http://localhost:3002/bo/system/getUserStatus)
