@@ -68,4 +68,5 @@ app.all('*', function (req, res) {
 // 4. Start Express
 app.listen(PORT, () => {
 	console.log(`Mock server started on port ${PORT}`);
+	console.log(`Open this link on browser -> http://localhost:3002/`);
 });

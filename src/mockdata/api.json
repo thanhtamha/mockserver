@@ -28,16 +28,6 @@
 					"apiName": "/bo/setting/deleteSetting",
 					"url": "/bo/setting/deleteSetting",
 					"type": "POST"
-				},
-				{
-					"apiName": "/bo/setting/searchSetting",
-					"url": "/bo/setting/searchSetting",
-					"type": "POST"
-				},
-				{
-					"apiName": "/bo/setting/updateSetting",
-					"url": "/bo/setting/updateSetting",
-					"type": "POST"
 				}
 			]
 		}
