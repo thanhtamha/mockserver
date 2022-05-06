@@ -5,13 +5,13 @@
 			"groupName": "System",
 			"apiList": [
 				{
-					"apiName": "/bo/system/getUserStatus",
-					"url": "/bo/system/getUserStatus",
+					"apiName": "/bo/system/getAllChannels",
+					"url": "/bo/system/getAllChannels",
 					"type": "POST"
 				},
 				{
-					"apiName": "/bo/system/getAllChannels",
-					"url": "/bo/system/getAllChannels",
+					"apiName": "/bo/system/ping",
+					"url": "/bo/system/ping",
 					"type": "POST"
 				}
 			]
