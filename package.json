@@ -2,9 +2,9 @@
 	"name": "apidoc",
 	"version": "1.0.0",
 	"description": "API Document",
-	"main": "src/index.js",
+	"main": "src/mock.js",
 	"scripts": {
-		"start": "nodemon src/index.js"
+		"start": "nodemon src/mock.js"
 	},
 	"author": "Ha Thanh Tam",
 	"license": "ISC",
