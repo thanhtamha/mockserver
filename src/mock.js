@@ -1,14 +1,15 @@
 const PORT = 3002;
 const THROTTLE = 1500;
-const express = require('express');
+const apidocFolder = 'src/apidoc';
+const mockFolder = './mockdata';
 
 // 1. Init express
+const express = require('express');
 const app = express();
 
-app.set('json spaces', 2);
 app.use(express.json());
-app.use(express.static('src/apidoc'));
-const mockFolder = './mockdata';
+app.set('json spaces', 2);
+app.use(express.static(apidocFolder));
 
 // 2. Middleware
 const cors = require('cors');
