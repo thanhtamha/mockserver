@@ -12,7 +12,7 @@
 				{
 					"apiName": "/bo/system/ping",
 					"url": "/bo/system/ping",
-					"type": "POST"
+					"type": "GET"
 				}
 			]
 		},
@@ -22,12 +22,12 @@
 				{
 					"apiName": "/bo/setting/addSetting",
 					"url": "/bo/setting/addSetting",
-					"type": "POST"
+					"type": "PUT"
 				},
 				{
 					"apiName": "/bo/setting/deleteSetting",
 					"url": "/bo/setting/deleteSetting",
-					"type": "POST"
+					"type": "DELETE"
 				}
 			]
 		}
