@@ -1,7 +1,8 @@
-const PORT = 3002;
 const THROTTLE = 1500;
+const PORT = parseInt(process.env.PORT) || 3002;
+
 const apidocFolder = 'src/apidoc';
-const mockFolder = './mockdata';
+const mockFolder = './mockdata/';
 
 // 1. Init express
 const express = require('express');
@@ -12,9 +13,9 @@ app.set('json spaces', 2);
 app.use(express.static(apidocFolder));
 
 // 2. Middleware
+console.log('CORS is enabled ...');
 const cors = require('cors');
 app.use(cors());
-console.log('CORS is enabled ...');
 
 app.use(function (req, res, next) {
 	if (req.originalUrl.includes('favicon.ico') || req.method === 'OPTIONS') {
@@ -34,12 +35,12 @@ app.all('*', function (req, res) {
 		if (path.startsWith('/ApiDoc') && path.includes('/ApiDoc')) {
 			// Request from API Doc - Web
 			if (path === '/ApiDoc/api') {
-				const mock = require(mockFolder + '/api.json');
+				const mock = require(mockFolder + 'api.json');
 				res.json({
 					detail: mock,
 				});
 			} else {
-				path = path.replace('/ApiDoc', '');
+				path = path.replace('/ApiDoc/', '');
 				const mockReq = require(mockFolder + path + '/request.json');
 				const mockRes = require(mockFolder + path + '/response.json');
 
@@ -52,7 +53,7 @@ app.all('*', function (req, res) {
 				res.json(Res);
 			}
 		} else {
-			// Others Request
+			// Others Request - Browser/Postman
 			const mock = require(mockFolder + path + '/response.json');
 			res.json(mock);
 		}
@@ -68,6 +69,6 @@ app.all('*', function (req, res) {
 
 // 4. Start Express
 app.listen(PORT, () => {
-	console.log(`Mock server started on port ${PORT}`);
+	console.log(`Server ApiDoc started on port ${PORT}`);
 	console.log(`Open this link on browser -> http://localhost:${PORT}/`);
 });
