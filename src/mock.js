@@ -2,7 +2,7 @@ const THROTTLE = 1500;
 const PORT = parseInt(process.env.PORT) || 3002;
 
 const apidocFolder = 'src/apidoc';
-const mockFolder = './mockdata/';
+const mockFolder = './apimock/';
 
 // 1. Init express
 const express = require('express');
